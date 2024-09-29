@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		2833A1522CA8954600294992 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833A1512CA8954600294992 /* AppDelegate.swift */; };
 		2833A1542CA8954600294992 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833A1532CA8954600294992 /* SceneDelegate.swift */; };
-		2833A1562CA8954600294992 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833A1552CA8954600294992 /* LaunchViewController.swift */; };
+		2833A1562CA8954600294992 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833A1552CA8954600294992 /* HomeViewController.swift */; };
 		2833A1592CA8954600294992 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2833A1572CA8954600294992 /* Main.storyboard */; };
 		2833A15B2CA8954800294992 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2833A15A2CA8954800294992 /* Assets.xcassets */; };
 		2833A15E2CA8954800294992 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2833A15C2CA8954800294992 /* LaunchScreen.storyboard */; };
 		2833A1682CA89A3D00294992 /* KulimPark-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2833A1672CA89A3D00294992 /* KulimPark-Regular.ttf */; };
 		2833A16A2CA89A4B00294992 /* KulimPark-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2833A1692CA89A4B00294992 /* KulimPark-Bold.ttf */; };
+		2833A16E2CA8F7C800294992 /* KulimPark-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2833A16D2CA8F7C800294992 /* KulimPark-BoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2833A14E2CA8954600294992 /* SharezWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharezWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2833A1512CA8954600294992 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2833A1532CA8954600294992 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2833A1552CA8954600294992 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		2833A1552CA8954600294992 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2833A1582CA8954600294992 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2833A15A2CA8954800294992 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2833A15D2CA8954800294992 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2833A15F2CA8954800294992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2833A1672CA89A3D00294992 /* KulimPark-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Regular.ttf"; sourceTree = "<group>"; };
 		2833A1692CA89A4B00294992 /* KulimPark-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Bold.ttf"; sourceTree = "<group>"; };
+		2833A16D2CA8F7C800294992 /* KulimPark-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-BoldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +77,7 @@
 		2833A1652CA8991000294992 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2833A1552CA8954600294992 /* LaunchViewController.swift */,
+				2833A1552CA8954600294992 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -83,6 +85,7 @@
 		2833A1662CA899BF00294992 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				2833A16D2CA8F7C800294992 /* KulimPark-BoldItalic.ttf */,
 				2833A1692CA89A4B00294992 /* KulimPark-Bold.ttf */,
 				2833A1672CA89A3D00294992 /* KulimPark-Regular.ttf */,
 			);
@@ -147,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2833A16E2CA8F7C800294992 /* KulimPark-BoldItalic.ttf in Resources */,
 				2833A16A2CA89A4B00294992 /* KulimPark-Bold.ttf in Resources */,
 				2833A1682CA89A3D00294992 /* KulimPark-Regular.ttf in Resources */,
 				2833A15E2CA8954800294992 /* LaunchScreen.storyboard in Resources */,
@@ -162,7 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2833A1562CA8954600294992 /* LaunchViewController.swift in Sources */,
+				2833A1562CA8954600294992 /* HomeViewController.swift in Sources */,
 				2833A1522CA8954600294992 /* AppDelegate.swift in Sources */,
 				2833A1542CA8954600294992 /* SceneDelegate.swift in Sources */,
 			);

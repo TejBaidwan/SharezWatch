@@ -10,7 +10,7 @@ import UIKit
 /**
  This class represents the launch screen of the application with the content about the app and my app logo
  */
-class LaunchViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     //MARK: - Oulets
     

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Launch View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LaunchViewController" customModule="SharezWatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SharezWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,9 +55,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="6bn-tB-u1n"/>
                     <connections>
-                        <outlet property="appLogo" destination="gVA-5i-4hI" id="DyD-H5-GHe"/>
-                        <outlet property="pageContent" destination="f3z-Wo-bqJ" id="M9a-vh-2cA"/>
-                        <outlet property="pageTitle" destination="0lP-ZX-uJM" id="DHJ-bJ-JMO"/>
+                        <outlet property="appLogo" destination="gVA-5i-4hI" id="wBm-g4-5cF"/>
+                        <outlet property="pageContent" destination="f3z-Wo-bqJ" id="uf5-fj-uVO"/>
+                        <outlet property="pageTitle" destination="0lP-ZX-uJM" id="8ZS-YM-E3y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -110,7 +110,7 @@
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="iosAppIcon" width="1024" height="1024"/>
         <namedColor name="CustomColourBackground">
-            <color red="1" green="0.44" blue="0.45500000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.43999999761581421" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
