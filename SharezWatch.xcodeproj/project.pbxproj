@@ -19,6 +19,8 @@
 		28A12EA82CB47B47005AD334 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EA72CB47B47005AD334 /* API.swift */; };
 		28A12EAA2CB47CCF005AD334 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EA92CB47CCF005AD334 /* Stock.swift */; };
 		28A12EAC2CB47E20005AD334 /* StockStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EAB2CB47E20005AD334 /* StockStore.swift */; };
+		28A12EAE2CB49C76005AD334 /* StockSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EAD2CB49C76005AD334 /* StockSearchViewController.swift */; };
+		28A12EB12CB49CAA005AD334 /* StockSearchTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EB02CB49CAA005AD334 /* StockSearchTableviewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		28A12EA72CB47B47005AD334 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		28A12EA92CB47CCF005AD334 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		28A12EAB2CB47E20005AD334 /* StockStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockStore.swift; sourceTree = "<group>"; };
+		28A12EAD2CB49C76005AD334 /* StockSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchViewController.swift; sourceTree = "<group>"; };
+		28A12EB02CB49CAA005AD334 /* StockSearchTableviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchTableviewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		2833A1502CA8954600294992 /* SharezWatch */ = {
 			isa = PBXGroup;
 			children = (
+				28A12EAF2CB49C8E005AD334 /* Cells */,
 				28A12EA62CB47B2D005AD334 /* Models */,
 				2833A1662CA899BF00294992 /* Fonts */,
 				2833A1652CA8991000294992 /* ViewControllers */,
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				2833A1552CA8954600294992 /* HomeViewController.swift */,
+				28A12EAD2CB49C76005AD334 /* StockSearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -107,6 +113,14 @@
 				28A12EAB2CB47E20005AD334 /* StockStore.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		28A12EAF2CB49C8E005AD334 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				28A12EB02CB49CAA005AD334 /* StockSearchTableviewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,8 +200,10 @@
 				28A12EAC2CB47E20005AD334 /* StockStore.swift in Sources */,
 				2833A1562CA8954600294992 /* HomeViewController.swift in Sources */,
 				2833A1522CA8954600294992 /* AppDelegate.swift in Sources */,
+				28A12EAE2CB49C76005AD334 /* StockSearchViewController.swift in Sources */,
 				28A12EA82CB47B47005AD334 /* API.swift in Sources */,
 				28A12EAA2CB47CCF005AD334 /* Stock.swift in Sources */,
+				28A12EB12CB49CAA005AD334 /* StockSearchTableviewCell.swift in Sources */,
 				2833A1542CA8954600294992 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

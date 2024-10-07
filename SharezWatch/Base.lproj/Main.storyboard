@@ -93,11 +93,11 @@
                                 <exclude reference="zub-Hv-FwL"/>
                                 <exclude reference="7Xq-GH-JVa"/>
                                 <exclude reference="ITR-fb-MyA"/>
-                                <exclude reference="XjE-tq-eXo"/>
                                 <exclude reference="HJb-An-4Qn"/>
+                                <exclude reference="XjE-tq-eXo"/>
+                                <exclude reference="iaW-dq-7iE"/>
                                 <exclude reference="M1a-K3-uGO"/>
                                 <exclude reference="t6D-pr-nA5"/>
-                                <exclude reference="iaW-dq-7iE"/>
                                 <exclude reference="ErL-54-og0"/>
                                 <exclude reference="Ymc-db-Qn0"/>
                                 <exclude reference="s5H-75-UJg"/>
@@ -108,10 +108,10 @@
                                 <include reference="WCg-eT-q9U"/>
                                 <include reference="uRh-zO-6Od"/>
                                 <include reference="ITR-fb-MyA"/>
-                                <include reference="XjE-tq-eXo"/>
                                 <include reference="HJb-An-4Qn"/>
-                                <include reference="M1a-K3-uGO"/>
+                                <include reference="XjE-tq-eXo"/>
                                 <include reference="iaW-dq-7iE"/>
+                                <include reference="M1a-K3-uGO"/>
                                 <include reference="Ymc-db-Qn0"/>
                                 <include reference="s5H-75-UJg"/>
                             </mask>
@@ -173,7 +173,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockCell" rowHeight="95" id="kNL-Sc-Jvb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockCell" rowHeight="95" id="kNL-Sc-Jvb" customClass="StockSearchTableviewCell">
                                 <rect key="frame" x="0.0" y="50" width="393" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kNL-Sc-Jvb" id="3Yu-mB-CEc">
@@ -214,6 +214,11 @@
                                         <constraint firstItem="YyF-TT-C6D" firstAttribute="bottom" secondItem="3Yu-mB-CEc" secondAttribute="bottomMargin" id="sNc-tC-OGY"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="stockName" destination="YyF-TT-C6D" id="Ypr-04-cPH"/>
+                                    <outlet property="stockPrice" destination="ueX-yJ-iXU" id="guT-2D-RsV"/>
+                                    <outlet property="stockTicker" destination="gsM-A5-1h3" id="BSE-Cc-Sgf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
