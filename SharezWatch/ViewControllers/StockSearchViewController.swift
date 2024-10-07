@@ -52,5 +52,45 @@ class StockSearchViewController: UIViewController {
         snapshot.appendItems(stocks)
         tableDataSource.apply(snapshot)
     }
+    
+    //MARK: - Creating and Fetching of Stock objects
+    
+    //Creating the URL, including the users search, and then creating the API query URL
+    func createStockURL(from search: String) -> URL? {
+        guard let cleanURL = search.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) else { return nil}
+        var urlString = "https://api.stockdata.org/v1/data/quote?symbols="
+        urlString = urlString.appending("\(cleanURL)")
+        urlString = urlString.appending("&api_token=\(API_KEY)")
+        
+        return URL(string: urlString)
+    }
+    
+    //Fetching stocks from the URL retrieved by the users search bar entry
+    func fetchStocks(from url: URL){
+        let stockTask = URLSession.shared.dataTask(with: url){
+            data, response, error in
+            if let dataError = error {
+                print("Error has occurred - \(dataError.localizedDescription)")
+            }else {
+                do{
+                    guard let someData = data else {
+                        return
+                    }
+                    
+                    let jsonDecoder = JSONDecoder()
+                    let downloadedResults = try jsonDecoder.decode(Stocks.self, from: someData)
+                    self.stocks = downloadedResults.results
+                    
+                    DispatchQueue.main.async {
+                        self.createSnapshot()
+                    }
+                }catch{
+                    print("A decoding error has occurred \(error.localizedDescription)")
+                }
+                
+            }
+        }
+        stockTask.resume()
+    }
 
 }
