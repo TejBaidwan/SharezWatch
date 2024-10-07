@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wxs-oj-exh">
-    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,17 +14,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SharezWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lP-ZX-uJM">
-                                <rect key="frame" x="76" y="44" width="325" height="20.333333333333329"/>
+                                <rect key="frame" x="76" y="103" width="241" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iosAppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gVA-5i-4hI">
-                                <rect key="frame" x="79" y="120" width="325" height="210"/>
+                                <rect key="frame" x="76" y="131.33333333333334" width="241" height="240.00000000000003"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="2pR-i6-srm"/>
                                     <constraint firstAttribute="height" constant="240" id="Az3-kw-vSa"/>
@@ -47,7 +47,7 @@
                                 </variation>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Page content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f3z-Wo-bqJ">
-                                <rect key="frame" x="412" y="44" width="361" height="296"/>
+                                <rect key="frame" x="16" y="400.33333333333326" width="361" height="368.66666666666674"/>
                                 <color key="backgroundColor" name="CustomColourBackground"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="361" id="WQL-8c-3tE"/>
@@ -93,11 +93,11 @@
                                 <exclude reference="zub-Hv-FwL"/>
                                 <exclude reference="7Xq-GH-JVa"/>
                                 <exclude reference="ITR-fb-MyA"/>
-                                <exclude reference="HJb-An-4Qn"/>
                                 <exclude reference="XjE-tq-eXo"/>
-                                <exclude reference="iaW-dq-7iE"/>
+                                <exclude reference="HJb-An-4Qn"/>
                                 <exclude reference="M1a-K3-uGO"/>
                                 <exclude reference="t6D-pr-nA5"/>
+                                <exclude reference="iaW-dq-7iE"/>
                                 <exclude reference="ErL-54-og0"/>
                                 <exclude reference="Ymc-db-Qn0"/>
                                 <exclude reference="s5H-75-UJg"/>
@@ -108,10 +108,10 @@
                                 <include reference="WCg-eT-q9U"/>
                                 <include reference="uRh-zO-6Od"/>
                                 <include reference="ITR-fb-MyA"/>
-                                <include reference="HJb-An-4Qn"/>
                                 <include reference="XjE-tq-eXo"/>
-                                <include reference="iaW-dq-7iE"/>
+                                <include reference="HJb-An-4Qn"/>
                                 <include reference="M1a-K3-uGO"/>
+                                <include reference="iaW-dq-7iE"/>
                                 <include reference="Ymc-db-Qn0"/>
                                 <include reference="s5H-75-UJg"/>
                             </mask>
@@ -149,7 +149,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="fRn-j6-nYJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="O3O-7W-7KJ">
-                        <rect key="frame" x="0.0" y="0.0" width="852" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -164,6 +164,86 @@
             </objects>
             <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
         </scene>
+        <!--Stock Search-->
+        <scene sceneID="dnG-FC-oVY">
+            <objects>
+                <tableViewController id="8dC-GN-Gcz" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="icv-Sl-xrk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockCell" rowHeight="95" id="kNL-Sc-Jvb">
+                                <rect key="frame" x="0.0" y="50" width="393" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kNL-Sc-Jvb" id="3Yu-mB-CEc">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="95"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Ticker" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsM-A5-1h3">
+                                            <rect key="frame" x="20" y="11" width="111" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="111" id="t0d-yo-0JL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-TT-C6D">
+                                            <rect key="frame" x="20" y="63" width="353" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueX-yJ-iXU">
+                                            <rect key="frame" x="286.33333333333331" y="11" width="86.666666666666686" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ueX-yJ-iXU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gsM-A5-1h3" secondAttribute="trailing" constant="8" symbolic="YES" id="5fU-i5-iyd"/>
+                                        <constraint firstItem="gsM-A5-1h3" firstAttribute="leading" secondItem="YyF-TT-C6D" secondAttribute="leading" id="7BQ-3M-6b3"/>
+                                        <constraint firstItem="gsM-A5-1h3" firstAttribute="top" secondItem="3Yu-mB-CEc" secondAttribute="topMargin" id="7Ox-IX-xBh"/>
+                                        <constraint firstItem="ueX-yJ-iXU" firstAttribute="trailing" secondItem="3Yu-mB-CEc" secondAttribute="trailingMargin" id="Dbf-Ej-czy"/>
+                                        <constraint firstItem="ueX-yJ-iXU" firstAttribute="trailing" secondItem="YyF-TT-C6D" secondAttribute="trailing" id="R6N-4q-rUb"/>
+                                        <constraint firstItem="gsM-A5-1h3" firstAttribute="leading" secondItem="3Yu-mB-CEc" secondAttribute="leadingMargin" id="Vmj-MI-9mw"/>
+                                        <constraint firstItem="gsM-A5-1h3" firstAttribute="firstBaseline" secondItem="ueX-yJ-iXU" secondAttribute="firstBaseline" id="cRr-cH-0aj"/>
+                                        <constraint firstItem="gsM-A5-1h3" firstAttribute="baseline" secondItem="ueX-yJ-iXU" secondAttribute="baseline" id="kAO-mp-ato"/>
+                                        <constraint firstItem="YyF-TT-C6D" firstAttribute="bottom" secondItem="3Yu-mB-CEc" secondAttribute="bottomMargin" id="sNc-tC-OGY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8dC-GN-Gcz" id="kH8-gI-Pma"/>
+                            <outlet property="delegate" destination="8dC-GN-Gcz" id="QXo-bT-FdP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Stock Search" id="Uf4-5s-8J4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="03I-wW-LzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038.9312977099237" y="752.81690140845069"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="ia0-eI-ypm">
+            <objects>
+                <navigationController id="G32-Wq-7Bx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="C8r-9g-OXC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lQh-L9-e7v">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8dC-GN-Gcz" kind="relationship" relationship="rootViewController" id="VQh-bT-Z3E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XEi-q9-5se" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="753"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KXa-vn-Qys">
             <objects>
@@ -172,11 +252,12 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Ez-eh-h3R">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" name="CustomColourBackground"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="7k0-QT-hDu" kind="relationship" relationship="viewControllers" id="VPu-1y-rfY"/>
+                        <segue destination="G32-Wq-7Bx" kind="relationship" relationship="viewControllers" id="9p5-Xh-hfE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JiK-Qs-OCz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,11 +268,21 @@
     <resources>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="iosAppIcon" width="1024" height="1024"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="CustomColourBackground">
             <color red="1" green="0.43999999761581421" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
