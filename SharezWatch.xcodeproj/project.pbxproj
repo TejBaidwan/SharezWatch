@@ -16,6 +16,7 @@
 		2833A1682CA89A3D00294992 /* KulimPark-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2833A1672CA89A3D00294992 /* KulimPark-Regular.ttf */; };
 		2833A16A2CA89A4B00294992 /* KulimPark-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2833A1692CA89A4B00294992 /* KulimPark-Bold.ttf */; };
 		2833A16E2CA8F7C800294992 /* KulimPark-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2833A16D2CA8F7C800294992 /* KulimPark-BoldItalic.ttf */; };
+		28A12EA82CB47B47005AD334 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EA72CB47B47005AD334 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2833A1672CA89A3D00294992 /* KulimPark-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Regular.ttf"; sourceTree = "<group>"; };
 		2833A1692CA89A4B00294992 /* KulimPark-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Bold.ttf"; sourceTree = "<group>"; };
 		2833A16D2CA8F7C800294992 /* KulimPark-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-BoldItalic.ttf"; sourceTree = "<group>"; };
+		28A12EA72CB47B47005AD334 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		2833A1502CA8954600294992 /* SharezWatch */ = {
 			isa = PBXGroup;
 			children = (
+				28A12EA62CB47B2D005AD334 /* Models */,
 				2833A1662CA899BF00294992 /* Fonts */,
 				2833A1652CA8991000294992 /* ViewControllers */,
 				2833A1512CA8954600294992 /* AppDelegate.swift */,
@@ -90,6 +93,14 @@
 				2833A1672CA89A3D00294992 /* KulimPark-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		28A12EA62CB47B2D005AD334 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28A12EA72CB47B47005AD334 /* API.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			files = (
 				2833A1562CA8954600294992 /* HomeViewController.swift in Sources */,
 				2833A1522CA8954600294992 /* AppDelegate.swift in Sources */,
+				28A12EA82CB47B47005AD334 /* API.swift in Sources */,
 				2833A1542CA8954600294992 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
