@@ -164,74 +164,6 @@
             </objects>
             <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
         </scene>
-        <!--Stock Search-->
-        <scene sceneID="dnG-FC-oVY">
-            <objects>
-                <tableViewController id="8dC-GN-Gcz" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="icv-Sl-xrk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockCell" rowHeight="95" id="kNL-Sc-Jvb" customClass="StockSearchTableviewCell">
-                                <rect key="frame" x="0.0" y="50" width="393" height="95"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kNL-Sc-Jvb" id="3Yu-mB-CEc">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="95"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Ticker" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsM-A5-1h3">
-                                            <rect key="frame" x="20" y="11" width="111" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="111" id="t0d-yo-0JL"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-TT-C6D">
-                                            <rect key="frame" x="20" y="63" width="353" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueX-yJ-iXU">
-                                            <rect key="frame" x="286.33333333333331" y="11" width="86.666666666666686" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="ueX-yJ-iXU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gsM-A5-1h3" secondAttribute="trailing" constant="8" symbolic="YES" id="5fU-i5-iyd"/>
-                                        <constraint firstItem="gsM-A5-1h3" firstAttribute="leading" secondItem="YyF-TT-C6D" secondAttribute="leading" id="7BQ-3M-6b3"/>
-                                        <constraint firstItem="gsM-A5-1h3" firstAttribute="top" secondItem="3Yu-mB-CEc" secondAttribute="topMargin" id="7Ox-IX-xBh"/>
-                                        <constraint firstItem="ueX-yJ-iXU" firstAttribute="trailing" secondItem="3Yu-mB-CEc" secondAttribute="trailingMargin" id="Dbf-Ej-czy"/>
-                                        <constraint firstItem="ueX-yJ-iXU" firstAttribute="trailing" secondItem="YyF-TT-C6D" secondAttribute="trailing" id="R6N-4q-rUb"/>
-                                        <constraint firstItem="gsM-A5-1h3" firstAttribute="leading" secondItem="3Yu-mB-CEc" secondAttribute="leadingMargin" id="Vmj-MI-9mw"/>
-                                        <constraint firstItem="gsM-A5-1h3" firstAttribute="firstBaseline" secondItem="ueX-yJ-iXU" secondAttribute="firstBaseline" id="cRr-cH-0aj"/>
-                                        <constraint firstItem="gsM-A5-1h3" firstAttribute="baseline" secondItem="ueX-yJ-iXU" secondAttribute="baseline" id="kAO-mp-ato"/>
-                                        <constraint firstItem="YyF-TT-C6D" firstAttribute="bottom" secondItem="3Yu-mB-CEc" secondAttribute="bottomMargin" id="sNc-tC-OGY"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="stockName" destination="YyF-TT-C6D" id="Ypr-04-cPH"/>
-                                    <outlet property="stockPrice" destination="ueX-yJ-iXU" id="guT-2D-RsV"/>
-                                    <outlet property="stockTicker" destination="gsM-A5-1h3" id="BSE-Cc-Sgf"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="8dC-GN-Gcz" id="kH8-gI-Pma"/>
-                            <outlet property="delegate" destination="8dC-GN-Gcz" id="QXo-bT-FdP"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Stock Search" id="Uf4-5s-8J4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="03I-wW-LzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1038.9312977099237" y="752.81690140845069"/>
-        </scene>
         <!--Search-->
         <scene sceneID="ia0-eI-ypm">
             <objects>
@@ -242,12 +174,102 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="8dC-GN-Gcz" kind="relationship" relationship="rootViewController" id="VQh-bT-Z3E"/>
+                        <segue destination="r4r-wi-WF7" kind="relationship" relationship="rootViewController" id="RBi-WR-Vhn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEi-q9-5se" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="753"/>
+        </scene>
+        <!--Stock Search-->
+        <scene sceneID="XVD-q3-fLS">
+            <objects>
+                <viewController id="r4r-wi-WF7" customClass="StockSearchViewController" customModule="SharezWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cli-Co-ePG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter a stock ticker" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-4k-7dd">
+                                <rect key="frame" x="0.0" y="103" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="b4M-oB-CvM"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="r4r-wi-WF7" id="uax-cv-wMK"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SIm-Nu-vAP">
+                                <rect key="frame" x="0.0" y="147" width="393" height="622"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockCell" rowHeight="133" id="Dby-8y-mXa" customClass="StockSearchTableviewCell" customModule="SharezWatch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="133"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dby-8y-mXa" id="5uZ-rZ-6Sy">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="133"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUK-0J-pQe">
+                                                    <rect key="frame" x="20.000000000000007" y="11" width="94.666666666666686" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wY-KU-Vdu">
+                                                    <rect key="frame" x="20.000000000000007" y="101" width="94.666666666666686" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPq-yo-oiO">
+                                                    <rect key="frame" x="286.33333333333331" y="11" width="86.666666666666686" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NUK-0J-pQe" firstAttribute="trailing" secondItem="3wY-KU-Vdu" secondAttribute="trailing" id="0Zt-Jw-5V4"/>
+                                                <constraint firstItem="NUK-0J-pQe" firstAttribute="baseline" secondItem="gPq-yo-oiO" secondAttribute="baseline" id="CeX-20-ZdE"/>
+                                                <constraint firstItem="NUK-0J-pQe" firstAttribute="top" secondItem="5uZ-rZ-6Sy" secondAttribute="topMargin" id="FnI-Ig-HTS"/>
+                                                <constraint firstItem="NUK-0J-pQe" firstAttribute="leading" secondItem="3wY-KU-Vdu" secondAttribute="leading" id="H0J-1l-GOg"/>
+                                                <constraint firstItem="gPq-yo-oiO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5uZ-rZ-6Sy" secondAttribute="trailingMargin" id="VSd-UE-fqF"/>
+                                                <constraint firstItem="NUK-0J-pQe" firstAttribute="leading" secondItem="5uZ-rZ-6Sy" secondAttribute="leadingMargin" id="cuc-zF-B5H"/>
+                                                <constraint firstItem="gPq-yo-oiO" firstAttribute="leading" secondItem="NUK-0J-pQe" secondAttribute="trailing" constant="171.66666666666663" id="k8a-Hy-aZa"/>
+                                                <constraint firstItem="3wY-KU-Vdu" firstAttribute="bottom" secondItem="5uZ-rZ-6Sy" secondAttribute="bottomMargin" id="lJq-5D-KhJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stockName" destination="3wY-KU-Vdu" id="HYs-J4-bkY"/>
+                                            <outlet property="stockPrice" destination="gPq-yo-oiO" id="45X-LU-sXW"/>
+                                            <outlet property="stockTicker" destination="NUK-0J-pQe" id="thJ-N7-BOo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vt7-Sl-PRQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Anf-4k-7dd" firstAttribute="trailing" secondItem="SIm-Nu-vAP" secondAttribute="trailing" id="0i6-9S-ff8"/>
+                            <constraint firstItem="SIm-Nu-vAP" firstAttribute="top" secondItem="Anf-4k-7dd" secondAttribute="bottom" id="4eX-fo-GUr"/>
+                            <constraint firstItem="Anf-4k-7dd" firstAttribute="top" secondItem="vt7-Sl-PRQ" secondAttribute="top" id="Mge-tI-YdZ"/>
+                            <constraint firstItem="Anf-4k-7dd" firstAttribute="leading" secondItem="vt7-Sl-PRQ" secondAttribute="leading" id="PRU-k3-iNZ"/>
+                            <constraint firstItem="Anf-4k-7dd" firstAttribute="leading" secondItem="SIm-Nu-vAP" secondAttribute="leading" id="lub-rv-JLX"/>
+                            <constraint firstItem="SIm-Nu-vAP" firstAttribute="bottom" secondItem="vt7-Sl-PRQ" secondAttribute="bottom" id="vbR-Ij-F1v"/>
+                            <constraint firstItem="Anf-4k-7dd" firstAttribute="centerX" secondItem="Cli-Co-ePG" secondAttribute="centerX" id="zr2-5b-1dR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stock Search" id="7g1-yf-jUT"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Anf-4k-7dd" id="QeO-gc-fpI"/>
+                        <outlet property="tableView" destination="SIm-Nu-vAP" id="DA5-CR-ZnI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOW-7v-NZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="752.81690140845069"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KXa-vn-Qys">
