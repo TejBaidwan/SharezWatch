@@ -12,7 +12,7 @@ import UIKit
  */
 class StockSearchViewController: UIViewController {
     
-    //MARK: - Oulets
+    //MARK: - Outlets
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -21,12 +21,22 @@ class StockSearchViewController: UIViewController {
     var stocks: [Stock] = []
     var stockStore: StockStore!
     
+    //Currency formatter
+    var priceFormatter: NumberFormatter = {
+        let price = NumberFormatter()
+        price.numberStyle = .currency
+        price.locale = Locale.current
+        return price
+    }()
+    
     //MARK: View Method(s)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        searchBar.delegate = self
+        tableView.delegate = self
         createSnapshot()
     }
     
@@ -38,9 +48,18 @@ class StockSearchViewController: UIViewController {
     lazy var tableDataSource = UITableViewDiffableDataSource<Section, Stock>(tableView: tableView) {
         tableView, indexPath, itemIdentifier in
         let cell = tableView.dequeueReusableCell(withIdentifier: "stockCell", for: indexPath) as! StockSearchTableviewCell
+        
+        //Creating  font style for the cell labels using my custom font from Google
+        if let customFontContent = UIFont(name: "KulimPark-Bold", size: 17) {
+            cell.stockTicker.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFontContent)
+            cell.stockName.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFontContent)
+            cell.stockPrice.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFontContent)
+        }
+        
+        //Settng the label values
         cell.stockTicker.text = itemIdentifier.ticker
         cell.stockName.text = itemIdentifier.name
-        cell.stockPrice.text = String(itemIdentifier.price)
+        cell.stockPrice.text = self.priceFormatter.string(from: NSNumber(value: itemIdentifier.price))
         
         return cell
     }

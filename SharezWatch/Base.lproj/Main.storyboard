@@ -202,6 +202,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SIm-Nu-vAP">
                                 <rect key="frame" x="0.0" y="147" width="393" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" name="CustomColourBackground"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockCell" id="S98-35-p0C" customClass="StockSearchTableviewCell" customModule="SharezWatch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -251,7 +252,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vt7-Sl-PRQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="CustomColourBackground"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Anf-4k-7dd" secondAttribute="trailing" id="Qdk-dh-4fx"/>
                             <constraint firstItem="SIm-Nu-vAP" firstAttribute="top" secondItem="Anf-4k-7dd" secondAttribute="bottom" id="SPu-fG-87K"/>
