@@ -78,8 +78,8 @@ class StockSearchViewController: UIViewController {
                     }
                     
                     let jsonDecoder = JSONDecoder()
-                    let downloadedResults = try jsonDecoder.decode(Stocks.self, from: someData)
-                    self.stocks = downloadedResults.results
+                    let downloadedResults = try jsonDecoder.decode(StockResponse.self, from: someData)
+                    self.stocks = downloadedResults.data
                     
                     DispatchQueue.main.async {
                         self.createSnapshot()
@@ -93,4 +93,26 @@ class StockSearchViewController: UIViewController {
         stockTask.resume()
     }
 
+}
+
+//MARK: - Extension Methods for SearchBar and TableView Cells
+
+//Parsing and fetching movies from search bar text
+extension StockSearchViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text, !searchText.isEmpty else { return }
+        if let stockURL = createStockURL(from: searchText){
+            fetchStocks(from: stockURL)
+        }
+        
+        //Resign keyboard
+        searchBar.resignFirstResponder()
+    }
+}
+
+//Handling the tapping of tableview cells
+extension StockSearchViewController:UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

@@ -12,6 +12,18 @@ enum Section {
     case main
 }
 
+//Breaking down the JSON response into the meta and data return, in which the data array contains the Stocks
+struct StockResponse: Codable {
+    let meta: Meta
+    let data: [Stock]
+}
+
+//Meta data detruned
+struct Meta: Codable {
+    let requested: Int
+    let returned: Int
+}
+
 //A Stock struct which represents the Stock object returned from StockData.org JSON query
 struct Stock: Codable, Hashable {
     let ticker: String
