@@ -111,6 +111,17 @@ class StockSearchViewController: UIViewController {
         }
         stockTask.resume()
     }
+    
+    //MARK: - Passing the Stock object details to the StockDetailsViewController
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedIndex = tableView.indexPathForSelectedRow else { return }
+        let chosenStock = stocks[selectedIndex.row]
+        
+        let destinationVC = segue.destination as! StockDetailsViewController
+        destinationVC.stock = chosenStock
+
+    }
 
 }
 
