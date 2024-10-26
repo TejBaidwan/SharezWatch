@@ -50,11 +50,17 @@ class StockDetailsViewController: UIViewController {
         
         //Getting the Stock passed over from the initial screen
         if let passedStock = stock{
-            passedStockTicker.text = passedStock.ticker
+            passedStockTicker.text = passedStock.ticker + " Details"
             passedStockCurrency.text = "Currency: \(passedStock.currency)"
             passedStockPrice.text = "Price: \(self.priceFormatter.string(from: NSNumber(value: passedStock.price)) ?? "$0.00")"
             passedStockName.text = "Name: \(passedStock.name)"
             passedStockDayRange.text = "Day Range:\(self.priceFormatter.string(from: NSNumber(value: passedStock.dayLow)) ?? "$0.00") - \(self.priceFormatter.string(from: NSNumber(value: passedStock.dayHigh)) ?? "$0.00")"
+            
+            //Creating a web URL using the stock sticker and loading a Yahoo Finance link
+            if let webLink = URL(string: "https://finance.yahoo.com/quote/" + passedStock.ticker + "/"){
+                let loadURL = URLRequest(url: webLink)
+                stockWebView.load(loadURL)
+            }
         }
     }
     
