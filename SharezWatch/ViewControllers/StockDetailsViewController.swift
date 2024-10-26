@@ -65,11 +65,42 @@ class StockDetailsViewController: UIViewController {
                 let loadURL = URLRequest(url: webLink)
                 stockWebView.load(loadURL)
             }
+            
+            //Setting the initial position of the webview off screen to the left
+            let startingPosition = CGAffineTransform(translationX: -view.bounds.width, y: 0)
+            stockWebView.transform = startingPosition
+                    
+            //Creating a gesture recognizer for the swiping of left to right (appear) for the webview
+            let swipeGestureAppear = UISwipeGestureRecognizer(target: self, action: #selector(appearSwipe))
+            swipeGestureAppear.direction = .right
+            view.addGestureRecognizer(swipeGestureAppear)
+            
+            //Creating a gesture recognizer for the swiping of right to left (disappear) for the webview
+            let swipeGestureDisappear = UISwipeGestureRecognizer(target: self, action: #selector(disappearSwipe))
+            swipeGestureDisappear.direction = .left
+            view.addGestureRecognizer(swipeGestureDisappear)
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    //MARK: - Gesture Methods
+    
+    //Method to react to the swiping of the webview onto the screen
+    @objc func appearSwipe(_ gesture: UISwipeGestureRecognizer) {
+        UIView.animate(withDuration: 1.0) {
+        self.stockWebView.transform = .identity
+        }
+    }
+    
+    //Method to react to the swiping of the webview off the screen
+    @objc func disappearSwipe(_ gesture: UISwipeGestureRecognizer) {
+        UIView.animate(withDuration: 1.0) {
+            let moveAway = CGAffineTransform(translationX: -self.view.bounds.width, y: 0)
+            self.stockWebView.transform = moveAway
+        }
     }
     
     //MARK: - Action handler for the calculate stock value button
