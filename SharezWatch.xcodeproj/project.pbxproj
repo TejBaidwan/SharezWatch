@@ -16,6 +16,7 @@
 		2833A1682CA89A3D00294992 /* KulimPark-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2833A1672CA89A3D00294992 /* KulimPark-Regular.ttf */; };
 		2833A16A2CA89A4B00294992 /* KulimPark-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2833A1692CA89A4B00294992 /* KulimPark-Bold.ttf */; };
 		2833A16E2CA8F7C800294992 /* KulimPark-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2833A16D2CA8F7C800294992 /* KulimPark-BoldItalic.ttf */; };
+		2883F85B2CCD85E100A3F5D5 /* StockDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2883F85A2CCD85E100A3F5D5 /* StockDetailsViewController.swift */; };
 		28A12EA82CB47B47005AD334 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EA72CB47B47005AD334 /* API.swift */; };
 		28A12EAA2CB47CCF005AD334 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EA92CB47CCF005AD334 /* Stock.swift */; };
 		28A12EAC2CB47E20005AD334 /* StockStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EAB2CB47E20005AD334 /* StockStore.swift */; };
@@ -35,6 +36,7 @@
 		2833A1672CA89A3D00294992 /* KulimPark-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Regular.ttf"; sourceTree = "<group>"; };
 		2833A1692CA89A4B00294992 /* KulimPark-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Bold.ttf"; sourceTree = "<group>"; };
 		2833A16D2CA8F7C800294992 /* KulimPark-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2883F85A2CCD85E100A3F5D5 /* StockDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailsViewController.swift; sourceTree = "<group>"; };
 		28A12EA72CB47B47005AD334 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		28A12EA92CB47CCF005AD334 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		28A12EAB2CB47E20005AD334 /* StockStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockStore.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				2833A1552CA8954600294992 /* HomeViewController.swift */,
 				28A12EAD2CB49C76005AD334 /* StockSearchViewController.swift */,
+				2883F85A2CCD85E100A3F5D5 /* StockDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				28A12EAE2CB49C76005AD334 /* StockSearchViewController.swift in Sources */,
 				28A12EA82CB47B47005AD334 /* API.swift in Sources */,
 				28A12EAA2CB47CCF005AD334 /* Stock.swift in Sources */,
+				2883F85B2CCD85E100A3F5D5 /* StockDetailsViewController.swift in Sources */,
 				28A12EB12CB49CAA005AD334 /* StockSearchTableviewCell.swift in Sources */,
 				2833A1542CA8954600294992 /* SceneDelegate.swift in Sources */,
 			);

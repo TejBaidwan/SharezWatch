@@ -274,10 +274,10 @@
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="752.81690140845069"/>
         </scene>
-        <!--View Controller-->
+        <!--Stock Details View Controller-->
         <scene sceneID="TAf-AU-cXu">
             <objects>
-                <viewController id="Cc8-xk-A9C" sceneMemberID="viewController">
+                <viewController id="Cc8-xk-A9C" customClass="StockDetailsViewController" customModule="SharezWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vBI-P2-C6x">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -456,6 +456,16 @@
                     <navigationItem key="navigationItem" id="adk-G9-ekW">
                         <barButtonItem key="rightBarButtonItem" image="bookmark" catalog="system" id="Ri2-Y0-JYI"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passedStockCurrency" destination="fuz-mf-Bza" id="j8W-om-4zW"/>
+                        <outlet property="passedStockDayRange" destination="k4z-jI-MHa" id="L1B-Mg-aHX"/>
+                        <outlet property="passedStockName" destination="NSw-lr-qhH" id="06O-sx-AQ4"/>
+                        <outlet property="passedStockPrice" destination="tRx-gK-MSR" id="xbY-Ga-avO"/>
+                        <outlet property="passedStockTicker" destination="3X4-yi-OPY" id="yQ4-Mu-IHx"/>
+                        <outlet property="stockQuantity" destination="Dfb-QD-twM" id="9bN-qv-qfu"/>
+                        <outlet property="stockValue" destination="gNY-1b-eiw" id="uJr-cx-ZHH"/>
+                        <outlet property="stockWebView" destination="qk1-Ep-w5k" id="jqt-Z4-QSu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UcK-2N-pAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

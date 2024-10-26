@@ -19,6 +19,7 @@ class StockSearchTableviewCell: UITableViewCell {
     @IBOutlet weak var stockName: UILabel!
     
     @IBOutlet weak var stockPrice: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
