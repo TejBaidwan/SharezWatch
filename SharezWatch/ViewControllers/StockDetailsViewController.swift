@@ -35,7 +35,30 @@ class StockDetailsViewController: UIViewController {
     
     var stock: Stock?
     
+    //Currency formatter
+    var priceFormatter: NumberFormatter = {
+        let price = NumberFormatter()
+        price.numberStyle = .currency
+        price.locale = Locale.current
+        return price
+    }()
+    
+    //MARK: View Method(s)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Getting the Stock passed over from the initial screen
+        if let passedStock = stock{
+            passedStockTicker.text = passedStock.ticker
+            passedStockCurrency.text = "Currency: \(passedStock.currency)"
+            passedStockPrice.text = "Price: \(self.priceFormatter.string(from: NSNumber(value: passedStock.price)) ?? "$0.00")"
+            passedStockName.text = "Name: \(passedStock.name)"
+            passedStockDayRange.text = "Day Range:\(self.priceFormatter.string(from: NSNumber(value: passedStock.dayLow)) ?? "$0.00") - \(self.priceFormatter.string(from: NSNumber(value: passedStock.dayHigh)) ?? "$0.00")"
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }
