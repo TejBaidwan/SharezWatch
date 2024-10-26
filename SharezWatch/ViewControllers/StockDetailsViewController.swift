@@ -27,9 +27,13 @@ class StockDetailsViewController: UIViewController {
     
     @IBOutlet weak var stockQuantity: UITextField!
     
+    @IBOutlet weak var calculateButton: UIButton!
+    
     @IBOutlet weak var stockValue: UILabel!
     
     @IBOutlet weak var stockWebView: WKWebView!
+    
+    
     
     //MARK: - Properties
     
@@ -66,5 +70,23 @@ class StockDetailsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    //MARK: - Action handler for the calculate stock value button
+    
+    @IBAction func calculateValue(_ sender: UIButton) {
+        
+        if let text = stockQuantity.text, !text.isEmpty {
+            let ticker = stock?.ticker ?? "X"
+            let shares = Double(text) ?? 0.0
+            let stockPrice = stock?.price ?? 0.0
+                
+            // Format total value as currency
+            let formattedValue = priceFormatter.string(from: NSNumber(value: shares * stockPrice)) ?? "$0.00"
+
+            stockValue.text = "\(text) shares of \(ticker) is worth \(formattedValue)"
+        } else {
+            stockValue.text = "Please enter a share quantity"
+        }
     }
 }
