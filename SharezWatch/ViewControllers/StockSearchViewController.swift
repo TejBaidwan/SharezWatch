@@ -49,7 +49,7 @@ class StockSearchViewController: UIViewController {
         tableView, indexPath, itemIdentifier in
         let cell = tableView.dequeueReusableCell(withIdentifier: "stockCell", for: indexPath) as! StockSearchTableviewCell
         
-        //Creating  font style for the cell labels using my custom font from Google
+        //Creating font style for the cell labels using my custom font from Google
         if let customFontContent = UIFont(name: "KulimPark-Bold", size: 17) {
             cell.stockTicker.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFontContent)
             cell.stockName.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFontContent)

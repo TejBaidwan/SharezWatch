@@ -52,6 +52,19 @@ class StockDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Creating font style for the cell labels using my custom font from Google
+        if let customFontContent = UIFont(name: "KulimPark-Bold", size: 17) {
+            passedStockCurrency.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFontContent)
+            passedStockPrice.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFontContent)
+            passedStockName.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFontContent)
+            passedStockDayRange.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFontContent)
+            stockValue.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFontContent)
+        }
+        
+        if let customFontContent = UIFont(name: "KulimPark-Bold", size: 24) {
+            passedStockTicker.font = UIFontMetrics(forTextStyle: .title3).scaledFont(for: customFontContent)
+        }
+        
         //Getting the Stock passed over from the initial screen
         if let passedStock = stock{
             passedStockTicker.text = passedStock.ticker + " Details"
