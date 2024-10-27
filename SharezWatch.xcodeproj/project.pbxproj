@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2823DC822CCDEB30002C5399 /* CustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2823DC812CCDEB30002C5399 /* CustomAnimation.swift */; };
 		2833A1522CA8954600294992 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833A1512CA8954600294992 /* AppDelegate.swift */; };
 		2833A1542CA8954600294992 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833A1532CA8954600294992 /* SceneDelegate.swift */; };
 		2833A1562CA8954600294992 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833A1552CA8954600294992 /* HomeViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2823DC812CCDEB30002C5399 /* CustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimation.swift; sourceTree = "<group>"; };
 		2833A14E2CA8954600294992 /* SharezWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharezWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2833A1512CA8954600294992 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2833A1532CA8954600294992 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				28A12EA72CB47B47005AD334 /* API.swift */,
 				28A12EA92CB47CCF005AD334 /* Stock.swift */,
 				28A12EAB2CB47E20005AD334 /* StockStore.swift */,
+				2823DC812CCDEB30002C5399 /* CustomAnimation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				2883F85B2CCD85E100A3F5D5 /* StockDetailsViewController.swift in Sources */,
 				28A12EB12CB49CAA005AD334 /* StockSearchTableviewCell.swift in Sources */,
 				2833A1542CA8954600294992 /* SceneDelegate.swift in Sources */,
+				2823DC822CCDEB30002C5399 /* CustomAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
