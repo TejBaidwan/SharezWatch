@@ -64,6 +64,8 @@ class StockDetailsViewController: UIViewController {
             if let webLink = URL(string: "https://finance.yahoo.com/quote/" + passedStock.ticker + "/"){
                 let loadURL = URLRequest(url: webLink)
                 stockWebView.load(loadURL)
+                stockWebView.layer.cornerRadius = 10.0 
+                stockWebView.layer.masksToBounds = true
             }
             
             //Setting the initial position of the webview off screen to the left
