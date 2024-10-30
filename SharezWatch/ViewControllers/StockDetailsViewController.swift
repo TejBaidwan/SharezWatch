@@ -34,10 +34,10 @@ class StockDetailsViewController: UIViewController {
     @IBOutlet weak var stockWebView: WKWebView!
     
     
-    
     //MARK: - Properties
     
     var stock: Stock?
+    var stockStore: StockStore!
     
     //Currency formatter
     var priceFormatter: NumberFormatter = {
@@ -135,4 +135,40 @@ class StockDetailsViewController: UIViewController {
             stockValue.text = "Please enter a share quantity"
         }
     }
+    
+    //MARK: - Handling a Stock being Watchlisted
+    
+    @IBAction func watchlistStock(_ sender: UIBarButtonItem) {
+        
+        guard let sentStock = stock else {
+            return
+        }
+        
+        //Creating the CustomDialog
+        let animationBanner = CustomAnimation()
+        animationBanner.frame = view.bounds
+        animationBanner.isOpaque = false
+        
+        view.addSubview(animationBanner)
+        view.isUserInteractionEnabled = false
+        
+        //Check is the stock has already been watchlisted and display an according banner
+        if stockStore.alreadyWatchlisted(stock: sentStock) {
+            animationBanner.dialogTitle = "\(sentStock.ticker) Already Saved" as NSString
+            animationBanner.dialogFillColour = UIColor.black
+            animationBanner.imageType = "exclamationmark.triangle"
+        } else {
+            stockStore.addStock(stock: sentStock)
+            animationBanner.dialogTitle = "\(sentStock.ticker) Watchlisted!" as NSString
+        }
+        
+        animationBanner.showDialog()
+        
+        let delay = 1.50
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+            self.navigationController?.popViewController(animated: true)
+        })
+    }
+    
 }

@@ -24,6 +24,7 @@
 		28A12EAE2CB49C76005AD334 /* StockSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EAD2CB49C76005AD334 /* StockSearchViewController.swift */; };
 		28A12EB12CB49CAA005AD334 /* StockSearchTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A12EB02CB49CAA005AD334 /* StockSearchTableviewCell.swift */; };
 		28EBA8682CD2CC9900EAC821 /* WatchlistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EBA8672CD2CC9900EAC821 /* WatchlistCollectionViewCell.swift */; };
+		28EBA86A2CD2CD7400EAC821 /* WatchlistedStocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EBA8692CD2CD7400EAC821 /* WatchlistedStocksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		28A12EAD2CB49C76005AD334 /* StockSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchViewController.swift; sourceTree = "<group>"; };
 		28A12EB02CB49CAA005AD334 /* StockSearchTableviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchTableviewCell.swift; sourceTree = "<group>"; };
 		28EBA8672CD2CC9900EAC821 /* WatchlistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCollectionViewCell.swift; sourceTree = "<group>"; };
+		28EBA8692CD2CD7400EAC821 /* WatchlistedStocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistedStocksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				2833A1552CA8954600294992 /* HomeViewController.swift */,
 				28A12EAD2CB49C76005AD334 /* StockSearchViewController.swift */,
 				2883F85A2CCD85E100A3F5D5 /* StockDetailsViewController.swift */,
+				28EBA8692CD2CD7400EAC821 /* WatchlistedStocksViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				28A12EB12CB49CAA005AD334 /* StockSearchTableviewCell.swift in Sources */,
 				28EBA8682CD2CC9900EAC821 /* WatchlistCollectionViewCell.swift in Sources */,
 				2833A1542CA8954600294992 /* SceneDelegate.swift in Sources */,
+				28EBA86A2CD2CD7400EAC821 /* WatchlistedStocksViewController.swift in Sources */,
 				2823DC822CCDEB30002C5399 /* CustomAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="1988.0281690140846" y="0.76335877862595414"/>
         </scene>
-        <!--View Controller-->
+        <!--Stock Watchlist-->
         <scene sceneID="JSi-no-Rs3">
             <objects>
-                <viewController id="X60-fe-lur" sceneMemberID="viewController">
+                <viewController id="X60-fe-lur" customClass="WatchlistedStocksViewController" customModule="SharezWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aav-NE-bO0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,10 @@
                         <viewLayoutGuide key="safeArea" id="QFm-vG-YHa"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FiG-6Y-y33"/>
+                    <navigationItem key="navigationItem" title="Stock Watchlist" id="FiG-6Y-y33"/>
+                    <connections>
+                        <outlet property="watchlistCollection" destination="x1a-B7-Ngu" id="TBw-iX-Ejv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eah-Lp-iSj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -718,7 +721,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="adk-G9-ekW">
-                        <barButtonItem key="rightBarButtonItem" image="bookmark" catalog="system" id="Ri2-Y0-JYI"/>
+                        <barButtonItem key="rightBarButtonItem" image="chart.line.uptrend.xyaxis" catalog="system" id="Ri2-Y0-JYI">
+                            <connections>
+                                <action selector="watchlistStock:" destination="Cc8-xk-A9C" id="b55-Jd-hJR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="calculateButton" destination="2x2-yp-CmR" id="3sW-lM-OvA"/>
@@ -778,7 +785,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark" catalog="system" width="110" height="128"/>
+        <image name="chart.line.uptrend.xyaxis" catalog="system" width="128" height="102"/>
         <image name="eye.fill" catalog="system" width="128" height="80"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="iosAppIcon" width="1024" height="1024"/>
