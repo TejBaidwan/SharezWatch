@@ -21,8 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         stockStore.getStocks()
         
         guard let rootVC = window?.rootViewController as? UITabBarController,
-              let firstNav = rootVC.viewControllers?[0] as? UINavigationController,
-              let homeVC = firstNav.viewControllers[0] as? HomeViewController,
               let secondNav = rootVC.viewControllers?[1] as? UINavigationController,
               let searchVC = secondNav.viewControllers[0] as? StockSearchViewController,
               let thirdNav = rootVC.viewControllers?[2] as? UINavigationController,

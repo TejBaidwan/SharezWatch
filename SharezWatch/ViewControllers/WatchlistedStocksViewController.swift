@@ -34,12 +34,14 @@ class WatchlistedStocksViewController: UIViewController {
         super.viewDidLoad()
         
         createSnapshot()
+        watchlistCollection.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         createSnapshot()
+        watchlistCollection.delegate = self
     }
     
     //MARK: - Loading of Data using DiffableDataSource into the CollectionView
@@ -48,9 +50,15 @@ class WatchlistedStocksViewController: UIViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "watchlistedStock", for: indexPath) as! WatchlistCollectionViewCell
         
         cell.watchlistTicker.text = watchlistedStock.ticker
-        cell.watchlistPrice.text = self.priceFormatter.string(from: NSNumber(value: watchlistedStock.price))
-        cell.watchlistChange.text = String(watchlistedStock.dayChange)
-        cell.watchlistQuantity.text = "0"
+        cell.watchlistPrice.text = "Price: " + (self.priceFormatter.string(from: NSNumber(value: watchlistedStock.price)) ?? "0.00")
+        cell.watchlistChange.text = "Change: " + String(watchlistedStock.dayChange)
+        cell.watchlistQuantity.text = "Quantity: " + "0"
+        
+        if(watchlistedStock.dayChange < 0) {
+            cell.backgroundColor = UIColor.red
+        } else {
+            cell.backgroundColor = UIColor.green
+        }
         
         return cell
     }
@@ -63,4 +71,41 @@ class WatchlistedStocksViewController: UIViewController {
         collectionViewDataSource.apply(snapshot)
     }
     
+}
+
+//MARK: - Extension Methods for setting the CollectionView sizes
+
+extension WatchlistedStocksViewController: UICollectionViewDelegateFlowLayout{
+    
+    //Line spacing in the collection view
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    //Interim spacing in the collection view
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    //Determining size for collection view cells based on landscape or portrait orientation
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let collectionViewWidth = collectionView.frame.width
+        let numberOfItems: CGFloat
+        
+        //Set the number of items in each row to 3 in portrait or 5 in landscape
+        if UIDevice.current.orientation.isLandscape {
+            numberOfItems = 4
+        } else {
+            numberOfItems = 2
+        }
+        
+        //Calculate item width and height
+        let spacing = (numberOfItems - 1) * 1
+        let itemWidth = (collectionViewWidth - spacing) / numberOfItems
+        let itemHeight = itemWidth
+
+        return CGSize(width: itemWidth, height: itemHeight)
+        
+    }
 }
