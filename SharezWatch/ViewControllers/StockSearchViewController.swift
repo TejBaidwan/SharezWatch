@@ -120,6 +120,7 @@ class StockSearchViewController: UIViewController {
         
         let destinationVC = segue.destination as! StockDetailsViewController
         destinationVC.stock = chosenStock
+        destinationVC.stockStore = stockStore
 
     }
 
