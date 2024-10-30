@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -141,6 +142,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1988.0281690140846" y="0.76335877862595414"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JSi-no-Rs3">
+            <objects>
+                <viewController id="X60-fe-lur" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aav-NE-bO0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x1a-B7-Ngu">
+                                <rect key="frame" x="16" y="103" width="361" height="666"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vrn-zB-k7D">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="watchlistedStock" id="IAb-Ie-Hz1">
+                                        <rect key="frame" x="0.0" y="0.0" width="128.66666666666669" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UkE-3F-Kfg">
+                                            <rect key="frame" x="0.0" y="0.0" width="128.66666666666669" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Ticker" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpn-zd-nAM">
+                                                    <rect key="frame" x="17.000000000000007" y="8" width="94.666666666666686" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="iRe-iq-QxY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMg-pa-0Kc">
+                                                    <rect key="frame" x="8" y="37" width="39" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSe-PT-ccv">
+                                                    <rect key="frame" x="8" y="66" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfe-cO-c5s">
+                                                    <rect key="frame" x="8" y="99" width="65" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vpn-zd-nAM" firstAttribute="leading" secondItem="UkE-3F-Kfg" secondAttribute="leading" constant="17" id="MOS-Kk-X3P"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RSe-PT-ccv" secondAttribute="trailing" constant="20" symbolic="YES" id="Obq-LU-jWp"/>
+                                                <constraint firstAttribute="bottom" secondItem="RSe-PT-ccv" secondAttribute="bottom" constant="41" id="Twt-rz-ZFs"/>
+                                                <constraint firstItem="vpn-zd-nAM" firstAttribute="top" secondItem="UkE-3F-Kfg" secondAttribute="topMargin" id="UkL-dW-tL4"/>
+                                                <constraint firstItem="RSe-PT-ccv" firstAttribute="leading" secondItem="Lfe-cO-c5s" secondAttribute="leading" id="avb-pl-BQT"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lfe-cO-c5s" secondAttribute="trailing" constant="20" symbolic="YES" id="bgh-m1-3Kh"/>
+                                                <constraint firstItem="Lfe-cO-c5s" firstAttribute="top" secondItem="RSe-PT-ccv" secondAttribute="bottom" constant="12" id="d0d-j4-p3C"/>
+                                                <constraint firstItem="vpn-zd-nAM" firstAttribute="centerX" secondItem="UkE-3F-Kfg" secondAttribute="centerX" id="kIw-ub-q5C"/>
+                                                <constraint firstItem="RSe-PT-ccv" firstAttribute="top" secondItem="ZMg-pa-0Kc" secondAttribute="bottom" constant="8" id="mJW-wG-4zX"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZMg-pa-0Kc" secondAttribute="trailing" constant="20" symbolic="YES" id="rOV-3z-RXX"/>
+                                                <constraint firstItem="RSe-PT-ccv" firstAttribute="leading" secondItem="UkE-3F-Kfg" secondAttribute="leadingMargin" id="u0S-Zh-hsN"/>
+                                                <constraint firstItem="RSe-PT-ccv" firstAttribute="leading" secondItem="ZMg-pa-0Kc" secondAttribute="leading" id="v8N-9B-suc"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QFm-vG-YHa"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FiG-6Y-y33"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eah-Lp-iSj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985.4961832061067" y="-755.63380281690149"/>
         </scene>
         <!--Home-->
         <scene sceneID="zhK-xK-maf">
@@ -530,6 +612,10 @@
                                 <exclude reference="VhC-ar-55L"/>
                                 <exclude reference="aqe-me-YWM"/>
                                 <exclude reference="8l4-wd-Lkr"/>
+                                <exclude reference="Y51-R9-3s7"/>
+                                <exclude reference="4Aa-jc-vhd"/>
+                                <exclude reference="L1b-G2-h7r"/>
+                                <exclude reference="TqD-ys-IyM"/>
                                 <exclude reference="0gi-1O-96g"/>
                                 <exclude reference="8TK-0d-t7e"/>
                                 <exclude reference="K9W-WU-k66"/>
@@ -540,10 +626,6 @@
                                 <exclude reference="0hw-f4-jWs"/>
                                 <exclude reference="px8-ar-3vd"/>
                                 <exclude reference="VHF-mL-30R"/>
-                                <exclude reference="Y51-R9-3s7"/>
-                                <exclude reference="4Aa-jc-vhd"/>
-                                <exclude reference="L1b-G2-h7r"/>
-                                <exclude reference="TqD-ys-IyM"/>
                                 <exclude reference="eXf-8p-dRM"/>
                                 <exclude reference="aw6-A0-WNz"/>
                                 <exclude reference="wWm-KQ-mQt"/>
@@ -575,13 +657,13 @@
                                 <include reference="kbD-nT-JfB"/>
                                 <include reference="aqe-me-YWM"/>
                                 <include reference="8l4-wd-Lkr"/>
+                                <include reference="Y51-R9-3s7"/>
+                                <include reference="4Aa-jc-vhd"/>
+                                <include reference="L1b-G2-h7r"/>
                                 <include reference="8TK-0d-t7e"/>
                                 <include reference="K9W-WU-k66"/>
                                 <include reference="GTy-8S-Tfl"/>
                                 <include reference="px8-ar-3vd"/>
-                                <include reference="Y51-R9-3s7"/>
-                                <include reference="4Aa-jc-vhd"/>
-                                <include reference="L1b-G2-h7r"/>
                                 <include reference="eXf-8p-dRM"/>
                                 <include reference="aw6-A0-WNz"/>
                                 <include reference="wWm-KQ-mQt"/>
@@ -618,13 +700,13 @@
                                 <include reference="Wof-yc-ENc"/>
                                 <include reference="hYj-Ck-Too"/>
                                 <include reference="VhC-ar-55L"/>
+                                <include reference="TqD-ys-IyM"/>
                                 <include reference="0gi-1O-96g"/>
                                 <include reference="76N-tt-BvP"/>
                                 <include reference="mG3-Tr-Jy0"/>
                                 <include reference="UdI-4b-Jgk"/>
                                 <include reference="0hw-f4-jWs"/>
                                 <include reference="VHF-mL-30R"/>
-                                <include reference="TqD-ys-IyM"/>
                                 <include reference="iub-fu-sLJ"/>
                             </mask>
                         </variation>
@@ -662,15 +744,36 @@
                     <connections>
                         <segue destination="7k0-QT-hDu" kind="relationship" relationship="viewControllers" id="VPu-1y-rfY"/>
                         <segue destination="G32-Wq-7Bx" kind="relationship" relationship="viewControllers" id="9p5-Xh-hfE"/>
+                        <segue destination="D9h-bf-Ehb" kind="relationship" relationship="viewControllers" id="SUE-ZA-bKx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JiK-Qs-OCz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
+        <!--Watchlist-->
+        <scene sceneID="M7m-0g-BwR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D9h-bf-Ehb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Watchlist" image="eye.fill" catalog="system" id="mMb-yL-ovC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="71y-QZ-2pN">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X60-fe-lur" kind="relationship" relationship="rootViewController" id="5qa-bM-Jg4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuv-49-2jS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058.7786259541983" y="-755.63380281690149"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bookmark" catalog="system" width="110" height="128"/>
+        <image name="eye.fill" catalog="system" width="128" height="80"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="iosAppIcon" width="1024" height="1024"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
