@@ -16,4 +16,8 @@ class WatchlistedStocksViewController: UIViewController {
     
     @IBOutlet weak var watchlistCollection: UICollectionView!
     
+    //MARK: - Properties
+    
+    var stockStore = StockStore()
+    
 }

@@ -10,13 +10,27 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var stockStore = StockStore()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        stockStore.getStocks()
+        
+        guard let rootVC = window?.rootViewController as? UITabBarController,
+              let firstNav = rootVC.viewControllers?[0] as? UINavigationController,
+              let homeVC = firstNav.viewControllers[0] as? HomeViewController,
+              let secondNav = rootVC.viewControllers?[1] as? UINavigationController,
+              let searchVC = secondNav.viewControllers[0] as? StockSearchViewController,
+              let thirdNav = rootVC.viewControllers?[2] as? UINavigationController,
+              let watchlistVC = thirdNav.viewControllers[0] as? WatchlistedStocksViewController
+        else { return }
+        
+        searchVC.stockStore = stockStore
+        watchlistVC.stockStore = stockStore
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
