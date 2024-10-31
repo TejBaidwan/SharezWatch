@@ -17,6 +17,10 @@ class StockWebViewController: UIViewController {
     
     @IBOutlet weak var stockWeb: WKWebView!
     
+    //MARK: - Properties
+    
+    var stockToWebView: Stock?
+    
     
     
 }

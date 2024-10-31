@@ -238,7 +238,7 @@
         <!--Stock Web View Controller-->
         <scene sceneID="XIy-wc-Go9">
             <objects>
-                <viewController id="v4F-lF-peV" customClass="StockWebViewController" customModule="SharezWatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StockWebViewController" id="v4F-lF-peV" customClass="StockWebViewController" customModule="SharezWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i1r-nV-Yzc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

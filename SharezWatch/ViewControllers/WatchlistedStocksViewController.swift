@@ -39,6 +39,11 @@ class WatchlistedStocksViewController: UIViewController {
         //Create a LongPress gesture recognizer and apply it to the collection view
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         watchlistCollection.addGestureRecognizer(longPressGesture)
+        
+        //Create a DoubleTap gesture recognizer and apply it to the collection view
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap(_:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        watchlistCollection.addGestureRecognizer(longPressGesture)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -84,7 +89,9 @@ class WatchlistedStocksViewController: UIViewController {
         collectionViewDataSource.apply(snapshot)
     }
     
-    // MARK: - Long Press Gesture Handler for deleting a Stock
+    // MARK: - Gesture Handlers
+    
+    //This method gets the item in the collectionview when long pressed, and creats an alert which allows for deletion of it from the watchlist
     @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
             
@@ -103,6 +110,24 @@ class WatchlistedStocksViewController: UIViewController {
                     self.createSnapshot()
                 }))
                 present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    //This method gets the item in the collectionview when double tapped, and segues to the web VC which shows a full-screen webview for the stock from Yahoo Finance
+    @objc func handleDoubleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        
+        if gestureRecognizer.state == .began {
+            
+            //Get the Stock object which is double tapped
+            let location = gestureRecognizer.location(in: watchlistCollection)
+            if let indexPath = watchlistCollection.indexPathForItem(at: location) {
+                let stockToView = stockStore.allStocks[indexPath.item]
+                
+                //Create a segue to the webview VC and pass over the selected stock
+                let stockWebVC = storyboard?.instantiateViewController(withIdentifier: "StockWebViewController") as! StockWebViewController
+                stockWebVC.stockToWebView = stockToView
+                present(stockWebVC, animated: true, completion: nil)
             }
         }
     }
