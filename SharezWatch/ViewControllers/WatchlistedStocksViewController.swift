@@ -43,7 +43,7 @@ class WatchlistedStocksViewController: UIViewController {
         //Create a DoubleTap gesture recognizer and apply it to the collection view
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap(_:)))
         doubleTapGesture.numberOfTapsRequired = 2
-        watchlistCollection.addGestureRecognizer(longPressGesture)
+        watchlistCollection.addGestureRecognizer(doubleTapGesture)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -116,8 +116,6 @@ class WatchlistedStocksViewController: UIViewController {
     
     //This method gets the item in the collectionview when double tapped, and segues to the web VC which shows a full-screen webview for the stock from Yahoo Finance
     @objc func handleDoubleTap(_ gestureRecognizer: UITapGestureRecognizer) {
-        
-        if gestureRecognizer.state == .began {
             
             //Get the Stock object which is double tapped
             let location = gestureRecognizer.location(in: watchlistCollection)
@@ -129,7 +127,6 @@ class WatchlistedStocksViewController: UIViewController {
                 stockWebVC.stockToWebView = stockToView
                 present(stockWebVC, animated: true, completion: nil)
             }
-        }
     }
     
 }

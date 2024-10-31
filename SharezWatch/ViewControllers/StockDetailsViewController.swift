@@ -73,7 +73,7 @@ class StockDetailsViewController: UIViewController {
             passedStockName.text = "Name: \(passedStock.name)"
             passedStockDayRange.text = "Day Range:\(self.priceFormatter.string(from: NSNumber(value: passedStock.dayLow)) ?? "$0.00") - \(self.priceFormatter.string(from: NSNumber(value: passedStock.dayHigh)) ?? "$0.00")"
             
-            //Creating a web URL using the stock sticker and loading a Yahoo Finance link
+            //Creating a web URL using the stock ticker and loading a Yahoo Finance link
             if let webLink = URL(string: "https://finance.yahoo.com/quote/" + passedStock.ticker + "/"){
                 let loadURL = URLRequest(url: webLink)
                 stockWebView.load(loadURL)
