@@ -45,6 +45,7 @@ struct Stock: Codable, Hashable {
     let volume: Int
     let isExtendedHoursPrice: Bool
     let lastTradeTime: String
+    var quantity: Double = 0.0
     
     // Coding keys to map JSON keys to property names
     enum CodingKeys: String, CodingKey {

@@ -513,7 +513,7 @@
                                     <action selector="calculateValue:" destination="Cc8-xk-A9C" eventType="touchUpInside" id="lXB-L9-iaF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to the right for chart information!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0E-fl-8MW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to the right for more info!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0E-fl-8MW">
                                 <rect key="frame" x="16" y="387" width="361" height="24.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="CKV-pu-QfR"/>

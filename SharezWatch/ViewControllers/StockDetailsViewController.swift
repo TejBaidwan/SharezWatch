@@ -73,8 +73,8 @@ class StockDetailsViewController: UIViewController {
             passedStockName.text = "Name: \(passedStock.name)"
             passedStockDayRange.text = "Day Range:\(self.priceFormatter.string(from: NSNumber(value: passedStock.dayLow)) ?? "$0.00") - \(self.priceFormatter.string(from: NSNumber(value: passedStock.dayHigh)) ?? "$0.00")"
             
-            //Creating a web URL using the stock ticker and loading a Yahoo Finance link
-            if let webLink = URL(string: "https://finance.yahoo.com/quote/" + passedStock.ticker + "/"){
+            //Creating a web URL using the stock ticker and loading a StockAnalysis link
+            if let webLink = URL(string: "https://stockanalysis.com/stocks/" + passedStock.ticker.lowercased() + "/company/"){
                 let loadURL = URLRequest(url: webLink)
                 stockWebView.load(loadURL)
                 stockWebView.layer.cornerRadius = 10.0 
@@ -140,8 +140,13 @@ class StockDetailsViewController: UIViewController {
     
     @IBAction func watchlistStock(_ sender: UIBarButtonItem) {
         
-        guard let sentStock = stock else {
+        guard var sentStock = stock else {
             return
+        }
+        
+        //Get entered quantity and change the Stock objects quantity property
+        if let quantityText = stockQuantity.text, let quantity = Double(quantityText) {
+            sentStock.quantity = quantity
         }
         
         //Creating the CustomDialog

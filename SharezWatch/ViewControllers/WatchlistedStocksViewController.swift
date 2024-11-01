@@ -70,7 +70,7 @@ class WatchlistedStocksViewController: UIViewController {
         cell.watchlistTicker.text = watchlistedStock.ticker
         cell.watchlistPrice.text = "Price: " + (self.priceFormatter.string(from: NSNumber(value: watchlistedStock.price)) ?? "0.00")
         cell.watchlistChange.text = "Change %: " + String(watchlistedStock.dayChange)
-        cell.watchlistQuantity.text = "Quantity: " + "0"
+        cell.watchlistQuantity.text = "Quantity: " + String(watchlistedStock.quantity)
         
         if(watchlistedStock.dayChange < 0) {
             cell.backgroundColor = UIColor.red
