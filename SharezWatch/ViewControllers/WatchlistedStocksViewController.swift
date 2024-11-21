@@ -36,6 +36,9 @@ class WatchlistedStocksViewController: UIViewController {
         watchlistCollection.delegate = self
         createSnapshot()
         
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleSingleTap(_:)))
+        watchlistCollection.addGestureRecognizer(singleTapGesture)
+        
         //Create a LongPress gesture recognizer and apply it to the collection view
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         watchlistCollection.addGestureRecognizer(longPressGesture)
@@ -44,6 +47,8 @@ class WatchlistedStocksViewController: UIViewController {
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap(_:)))
         doubleTapGesture.numberOfTapsRequired = 2
         watchlistCollection.addGestureRecognizer(doubleTapGesture)
+        
+        singleTapGesture.require(toFail: doubleTapGesture)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -90,6 +95,41 @@ class WatchlistedStocksViewController: UIViewController {
     }
     
     // MARK: - Gesture Handlers
+    
+    //Handle Single Tap for updating stock quantity
+    @objc func handleSingleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        let location = gestureRecognizer.location(in: watchlistCollection)
+        if let indexPath = watchlistCollection.indexPathForItem(at: location) {
+            let selectedStock = stockStore.allStocks[indexPath.item]
+
+            //Create an alert with a text field
+            let alertController = UIAlertController(title: "Update Quantity",
+                                                    message: "Enter new quantity for \(selectedStock.ticker)",
+                                                    preferredStyle: .alert)
+
+            //Add a text field to the alert for entering quantity
+            alertController.addTextField { textField in
+                textField.keyboardType = .decimalPad
+                textField.placeholder = "Enter quantity"
+                textField.text = "\(selectedStock.quantity)" // Prefill with current quantity
+            }
+
+            //Confirm action to update quantity
+            let confirmAction = UIAlertAction(title: "Confirm", style: .default) { _ in
+                if let text = alertController.textFields?.first?.text, let newQuantity = Double(text) {
+                    self.stockStore.updateStock(ticker: selectedStock.ticker, newQuantity: newQuantity)
+                    self.createSnapshot()
+                }
+            }
+
+            //Cancel action
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alertController.addAction(confirmAction)
+
+            //Present the alert
+            present(alertController, animated: true, completion: nil)
+        }
+    }
     
     //This method gets the item in the collectionview when long pressed, and creats an alert which allows for deletion of it from the watchlist
     @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {

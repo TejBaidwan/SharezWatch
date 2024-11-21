@@ -94,6 +94,11 @@ class StockDetailsViewController: UIViewController {
             let swipeGestureDisappear = UISwipeGestureRecognizer(target: self, action: #selector(disappearSwipe))
             swipeGestureDisappear.direction = .left
             view.addGestureRecognizer(swipeGestureDisappear)
+            
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+                view.addGestureRecognizer(tapGesture)
+            
+            stockQuantity.keyboardType = .numberPad
         }
     }
     
@@ -116,6 +121,11 @@ class StockDetailsViewController: UIViewController {
             let moveAway = CGAffineTransform(translationX: -self.view.bounds.width, y: 0)
             self.stockWebView.transform = moveAway
         }
+    }
+    
+    //Dismiss the keyboard when quantity is entered
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     //MARK: - Action handler for the calculate stock value button

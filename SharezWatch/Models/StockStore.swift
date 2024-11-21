@@ -30,11 +30,7 @@ class StockStore {
     }
 
     func alreadyWatchlisted(stock: Stock) -> Bool {
-        if stocks.contains(stock){
-            return true
-        } else {
-            return false
-        }
+        return stocks.contains { $0.ticker == stock.ticker }
     }
     
     //MARK: - Adding and Removing Stocks from the StockStore
@@ -53,6 +49,14 @@ class StockStore {
             }
         }
     }
+    
+    func updateStock(ticker: String, newQuantity: Double) {
+        if let index = stocks.firstIndex(where: { $0.ticker == ticker }) {
+            stocks[index].quantity = newQuantity
+            saveStocks()  // Save changes right after updating
+        }
+    }
+
     
     // MARK: - Persisting of Stocks in the application
     
