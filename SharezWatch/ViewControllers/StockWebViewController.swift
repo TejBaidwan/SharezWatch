@@ -38,6 +38,13 @@ class StockWebViewController: UIViewController {
         }
     }
     
+    //Making sure the webview displayed fills the full width of the screen no matter the orientation
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        stockWeb.frame = self.view.bounds
+    }
+
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
